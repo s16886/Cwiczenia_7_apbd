@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 
 #nullable disable
-
 namespace Cwiczenia7.Models
 {
     public partial class Client
@@ -13,7 +12,6 @@ namespace Cwiczenia7.Models
         }
 
         public int IdClient { get; set; }
-        
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Email { get; set; }

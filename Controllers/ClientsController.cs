@@ -1,7 +1,5 @@
 ﻿using Cwiczenia7.Exceptions;
-using Cwiczenia7.Models;
 using Cwiczenia7.Services;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
@@ -22,7 +20,6 @@ namespace Cwiczenia7.Controllers
         [Route("{id}")]
         public async Task<IActionResult> RemoveClientAsync(int id)
         {
-            
             try
             {
                 await _dbService.RemoveClientAsync(id);

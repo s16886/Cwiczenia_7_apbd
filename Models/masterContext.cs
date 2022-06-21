@@ -1,21 +1,12 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
+﻿using Microsoft.EntityFrameworkCore;
 
 #nullable disable
-
 namespace Cwiczenia7.Models
 {
     public partial class masterContext : DbContext
     {
-        public masterContext()
-        {
-        }
-
-        public masterContext(DbContextOptions<masterContext> options)
-            : base(options)
-        {
-        }
+        public masterContext() { }
+        public masterContext(DbContextOptions<masterContext> options) : base(options) { }
 
         public virtual DbSet<Client> Clients { get; set; }
         public virtual DbSet<ClientTrip> ClientTrips { get; set; }
@@ -23,12 +14,8 @@ namespace Cwiczenia7.Models
         public virtual DbSet<CountryTrip> CountryTrips { get; set; }
         public virtual DbSet<Trip> Trips { get; set; }
 
-        
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.HasAnnotation("Relational:Collation", "Latin1_General_CI_AS");
-
             modelBuilder.Entity<Client>(entity =>
             {
                 entity.HasKey(e => e.IdClient)

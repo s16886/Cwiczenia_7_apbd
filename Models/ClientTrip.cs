@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-
 #nullable disable
-
 namespace Cwiczenia7.Models
 {
     public partial class ClientTrip
@@ -15,7 +13,6 @@ namespace Cwiczenia7.Models
 
         
         public virtual Client IdClientNavigation { get; set; }
-        
         public virtual Trip IdTripNavigation { get; set; }
     }
 }

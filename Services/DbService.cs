@@ -33,7 +33,6 @@ namespace Cwiczenia7.Services
         }
         public async Task RemoveClientAsync(int id)
         {
-            
             var client = await _dbContext.Clients.Where(e => e.IdClient == id).FirstOrDefaultAsync();
             if (client == null) throw new ClientNotFoundException();
             if (client.ClientTrips.Count > 0) throw new TripsAssignedException();
@@ -41,7 +40,6 @@ namespace Cwiczenia7.Services
             await _dbContext.SaveChangesAsync();
         }
         
-
         public async Task AssignToTripAsync(SomeSortOfClientTrip trip)
         {
             var client = _dbContext.Clients.FirstOrDefault(e => e.Pesel == trip.Pesel);

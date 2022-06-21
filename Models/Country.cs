@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 #nullable disable
-
 namespace Cwiczenia7.Models
 {
     public partial class Country

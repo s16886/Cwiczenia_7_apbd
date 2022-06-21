@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 
 #nullable disable
-
 namespace Cwiczenia7.Models
 {
     public partial class Trip
@@ -12,7 +11,6 @@ namespace Cwiczenia7.Models
             ClientTrips = new HashSet<ClientTrip>();
             CountryTrips = new HashSet<CountryTrip>();
         }
-
         public int IdTrip { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
